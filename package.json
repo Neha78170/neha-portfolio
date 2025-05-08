@@ -1,10 +1,17 @@
 {
+<<<<<<< HEAD
   "name": "personal-protfolio",
+=======
+  "name": "portfolio",
+>>>>>>> d07982507458ed0d1d2a434bd8043ec1202520a4
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
     
+=======
+>>>>>>> d07982507458ed0d1d2a434bd8043ec1202520a4
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -13,8 +20,12 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
+<<<<<<< HEAD
     "react-dom": "^19.0.0",
     "react-scroll": "^1.9.3"
+=======
+    "react-dom": "^19.0.0"
+>>>>>>> d07982507458ed0d1d2a434bd8043ec1202520a4
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
