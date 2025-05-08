@@ -1,26 +1,13 @@
-*{
-<<<<<<< HEAD
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    width: 100%;
-    height: 100vh;
-    background-color: #161513;
-    color: white;
-    font-family: "Roboto", sans-serif;
-=======
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   width: 100%;
   height: 100vh;
   background-color: #161513;
   color: white;
   font-family: "Roboto", sans-serif;
->>>>>>> d07982507458ed0d1d2a434bd8043ec1202520a4
-
 }
