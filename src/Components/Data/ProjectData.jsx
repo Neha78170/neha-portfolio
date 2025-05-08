@@ -1,5 +1,4 @@
 import todo from "../../assets/todo-project.png"
-import weather from "../../assets/weather.png"
 const ProjectData = [
     {
      title: "To-Do List Project ",
