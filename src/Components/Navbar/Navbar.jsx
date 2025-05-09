@@ -1,37 +1,53 @@
 import React, { useState } from 'react';
-import "./Navbar.css";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 function Navbar() {
-  const [menu, setMenu] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className="nav-bar">
-      <h3>Portfolio</h3>
-      <ul className='item'>
-        <li>
-          <AnchorLink href='#home' className='anchor-link'>
-            <p onClick={() => setMenu("home")}>Home</p>
-          </AnchorLink>
-        </li>
-        <li>
-          <AnchorLink href='#about' className='anchor-link'>
-            <p onClick={() => setMenu("about")}>About</p>
-          </AnchorLink>
-        </li>
-        <li>
-          <AnchorLink href='#projects' className='anchor-link'>
-            <p onClick={() => setMenu("projects")}>Projects</p>
-          </AnchorLink>
-        </li>
-        <li>
-          <AnchorLink href='#contact' className='anchor-link'>
-            <p onClick={() => setMenu("contact")}>Contact</p>
-          </AnchorLink>
-        </li>
-        <button className='connect-nav'>Connect With Me</button>
-      </ul>
-    </div>
+    <nav className="bg-[#161513] shadow-md fixed top-0 w-full z-50 h-[15vh] flex items-center px-4 sm:px-10">
+      <div className="max-w-7xl w-full mx-auto flex justify-between items-center">
+        <h3 className="text-[30px] font-bold bg-gradient-to-r from-[#ad0f00e0] to-[#eec9c9e6] bg-clip-text text-transparent">
+          Portfolio
+        </h3>
+        <ul className="hidden md:flex items-center gap-[30px] list-none text-white text-[18px]">
+          <li className="hover:text-[#ad0f00e0] hover:border-b border-[#ad0f00e0] pb-[5px] transition-all duration-300">
+            <AnchorLink href="#home" className="no-underline text-inherit">Home</AnchorLink>
+          </li>
+          <li className="hover:text-[#ad0f00e0] hover:border-b border-[#ad0f00e0] pb-[5px] transition-all duration-300">
+            <AnchorLink href="#about" className="no-underline text-inherit">About</AnchorLink>
+          </li>
+          <li className="hover:text-[#ad0f00e0] hover:border-b border-[#ad0f00e0] pb-[5px] transition-all duration-300">
+            <AnchorLink href="#projects" className="no-underline text-inherit">Projects</AnchorLink>
+          </li>
+          <li className="hover:text-[#ad0f00e0] hover:border-b border-[#ad0f00e0] pb-[5px] transition-all duration-300">
+            <AnchorLink href="#contact" className="no-underline text-inherit">Contact</AnchorLink>
+          </li>
+        </ul>
+        {/* Hamburger Menu - Mobile Only */}
+        <div className="md:hidden text-white text-3xl cursor-pointer" onClick={toggleMenu}>
+          {menuOpen ? '✖' : '☰'}
+        </div>
+        {menuOpen && (
+          <ul className="md:hidden absolute top-[15vh] left-0 w-full bg-[#161513] flex flex-col items-center gap-6 py-6 text-white text-[18px] shadow-md z-40 transition-all duration-500 transform ease-in-out translate-y-0 opacity-100">
+            <li onClick={closeMenu} className="transition-transform duration-300 transform hover:text-red-400">
+              <AnchorLink href="#home" className="no-underline text-inherit">Home</AnchorLink>
+            </li>
+            <li onClick={closeMenu} className="transition-transform duration-300 transform hover:text-red-400">
+              <AnchorLink href="#about" className="no-underline text-inherit">About</AnchorLink>
+            </li>
+            <li onClick={closeMenu} className="transition-transform duration-300 transform hover:text-red-400">
+              <AnchorLink href="#projects" className="no-underline text-inherit">Projects</AnchorLink>
+            </li>
+            <li onClick={closeMenu} className="transition-transform duration-300 transform hover:text-red-400">
+              <AnchorLink href="#contact" className="no-underline text-inherit">Contact</AnchorLink>
+            </li>
+          </ul>
+        )}
+      </div>
+    </nav>
   );
 }
 
