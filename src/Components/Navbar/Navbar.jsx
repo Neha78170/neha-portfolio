@@ -7,9 +7,10 @@ function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="bg-[#161513] shadow-md fixed top-0 w-full z-50 h-[15vh] flex items-center px-4 sm:px-10">
-      <div className="max-w-7xl w-full mx-auto flex justify-between items-center">
-        <h3 className="text-[30px] font-bold bg-gradient-to-r from-[#ad0f00e0] to-[#eec9c9e6] bg-clip-text text-transparent">
+    <nav className="w-full bg-[#161513]  shadow-md fixed t-0 z-10 h-[15vh] flex items-center sm:px-10">
+      <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
+
+        <h3 className="text-[30px] font-bold bg-gradient-to-r from-[#ad0f00e0] to-[#eec9c9e6] bg-clip-text text-transparent ">
           Portfolio
         </h3>
         <ul className="hidden md:flex items-center gap-[30px] list-none text-white text-[18px]">

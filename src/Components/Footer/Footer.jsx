@@ -1,34 +1,41 @@
-import React from 'react'
-import "./footer.css"
 import user_icon from '../../assets/user_icon.png'
-const footer = () => {
-  return (
-    <div className='footer'>
-      <div className="footer-top">
-        <div className="footer-top-left">
-        <p>I am Passionate front-end developer,easer to learn and create amazing web experience. </p>
 
+const Footer = () => {
+  return (
+    <div className="flex flex-col gap-[30px] my-[40px] mx-[80px] text-white">
+      {/* Top Section */}
+      <div className="flex flex-col lg:flex-row justify-between gap-5">
+        <div className="max-w-[400px]">
+          <p className="text-[18px]">
+            I am Passionate front-end developer, eager to learn and create amazing web experience.
+          </p>
         </div>
-        <div className="footer-top-right">
-            <div className="footer-email-input">
-                <img src={user_icon} alt="" height="50px"/>
-                <input type='email' placeholder='Enter your email'/>
-            </div>
+
+        <div className="flex items-center gap-[30px]">
+          <div className="flex items-center gap-[20px] pr-[80px] py-[5px] px-[10px] rounded-full bg-[#32323c] hover:scale-110 transition-transform duration-300">
+            <img src={user_icon} alt="" className="h-[50px]" />
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="bg-transparent outline-none border-none text-white text-[16px] font-[Outfit] placeholder-white"
+            />
+          </div>
         </div>
       </div>
-      <hr/>
-      <div className="footer-bottom">
-        <p className="footer-bootom-left">
-            0 2025 Neha Kashyap .All rights reserved.
-        </p>
-        <div className="footer-bottom-right">
-            <p>Term of Services</p>
-            <p>Privacy Policy</p>
-            <p>Connect with me</p>
+
+      <hr className="border-gray-600" />
+
+      {/* Bottom Section */}
+      <div className="flex flex-col lg:flex-row justify-between text-[16px]">
+        <p className="mb-5 lg:mb-0">© 2025 Neha Kashyap. All rights reserved.</p>
+        <div className="flex gap-[50px] mb-[50px]">
+          <p>Term of Services</p>
+          <p>Privacy Policy</p>
+          <p>Connect with me</p>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default footer;
+export default Footer;
