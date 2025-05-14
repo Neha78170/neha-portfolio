@@ -7,46 +7,50 @@ function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="w-full bg-[#161513]  shadow-md fixed t-0 z-10 h-[15vh] flex items-center sm:px-10">
+    <nav className="w-full bg-[#161513] shadow-md fixed top-0 z-50 py-4 px-5 sm:px-10">
       <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
 
-        <h3 className="text-[30px] font-bold bg-gradient-to-r from-[#ad0f00e0] to-[#eec9c9e6] bg-clip-text text-transparent ">
+        {/* Logo */}
+        <h3 className="text-[30px] font-bold bg-gradient-to-r from-[#ad0f00e0] to-[#eec9c9e6] bg-clip-text text-transparent">
           Portfolio
         </h3>
-        <ul className="hidden md:flex items-center gap-[30px] list-none text-white text-[18px]">
-          <li className="hover:text-[#ad0f00e0] hover:border-b border-[#ad0f00e0] pb-[5px] transition-all duration-300">
-            <AnchorLink href="#home" className="no-underline text-inherit">Home</AnchorLink>
-          </li>
-          <li className="hover:text-[#ad0f00e0] hover:border-b border-[#ad0f00e0] pb-[5px] transition-all duration-300">
-            <AnchorLink href="#about" className="no-underline text-inherit">About</AnchorLink>
-          </li>
-          <li className="hover:text-[#ad0f00e0] hover:border-b border-[#ad0f00e0] pb-[5px] transition-all duration-300">
-            <AnchorLink href="#projects" className="no-underline text-inherit">Projects</AnchorLink>
-          </li>
-          <li className="hover:text-[#ad0f00e0] hover:border-b border-[#ad0f00e0] pb-[5px] transition-all duration-300">
-            <AnchorLink href="#contact" className="no-underline text-inherit">Contact</AnchorLink>
-          </li>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex items-center gap-[30px] text-white text-[18px]">
+          {['home', 'about', 'projects', 'contact'].map((item) => (
+            <li
+              key={item}
+              className="hover:text-[#ad0f00e0] hover:border-b border-[#ad0f00e0] pb-[5px] transition-all duration-300"
+            >
+              <AnchorLink href={`#${item}`} className="no-underline text-inherit capitalize">
+                {item}
+              </AnchorLink>
+            </li>
+          ))}
         </ul>
-        {/* Hamburger Menu - Mobile Only */}
+
+        {/* Hamburger */}
         <div className="md:hidden text-white text-3xl cursor-pointer" onClick={toggleMenu}>
           {menuOpen ? '✖' : '☰'}
         </div>
-        {menuOpen && (
-          <ul className="md:hidden absolute top-[15vh] left-0 w-full bg-[#161513] flex flex-col items-center gap-6 py-6 text-white text-[18px] shadow-md z-40 transition-all duration-500 transform ease-in-out translate-y-0 opacity-100">
-            <li onClick={closeMenu} className="transition-transform duration-300 transform hover:text-red-400">
-              <AnchorLink href="#home" className="no-underline text-inherit">Home</AnchorLink>
-            </li>
-            <li onClick={closeMenu} className="transition-transform duration-300 transform hover:text-red-400">
-              <AnchorLink href="#about" className="no-underline text-inherit">About</AnchorLink>
-            </li>
-            <li onClick={closeMenu} className="transition-transform duration-300 transform hover:text-red-400">
-              <AnchorLink href="#projects" className="no-underline text-inherit">Projects</AnchorLink>
-            </li>
-            <li onClick={closeMenu} className="transition-transform duration-300 transform hover:text-red-400">
-              <AnchorLink href="#contact" className="no-underline text-inherit">Contact</AnchorLink>
-            </li>
-          </ul>
-        )}
+      </div>
+
+      {/* Slide-in Mobile Menu */}
+      <div
+        className={`fixed top-0 left-0 h-screen w-full bg-[#161513] z-40 flex flex-col items-center justify-center gap-6 text-white text-[18px] transition-transform duration-500 ${
+          menuOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        {['home', 'about', 'projects', 'contact'].map((item) => (
+          <AnchorLink
+            key={item}
+            href={`#${item}`}
+            onClick={closeMenu}
+            className="block w-full py-2 text-center no-underline text-white hover:text-red-400 active:text-yellow-300 transition-colors capitalize"
+          >
+            {item}
+          </AnchorLink>
+        ))}
       </div>
     </nav>
   );

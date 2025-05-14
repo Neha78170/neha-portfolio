@@ -1,12 +1,28 @@
-# React + Vite
+# Personal Portfolio - Neha Kashyap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio built with **React.js** and **Tailwind CSS**.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Projects Included
+- **To-Do List App** – Task tracking with local storage & completion filters.
+- **Weather App** – Real-time weather info using external APIs.
+- **Contact Form App** – Controlled form with validations.
+- **Internship Apply Tracker** – Tracks daily internship applications.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+- React.js
+- Tailwind CSS
+- React Router
+- Git & GitHub
+- Netlify (for deployment)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 👩‍💻 About Me
+I'm a passionate Front-end Developer who loves creating clean, responsive, and user-friendly web applications. I'm always excited to learn and grow.
+
+## 📬 Connect with Me
+- **Email**: nehaneha09276@gmail.com
+- **LinkedIn**: [Neha Kashyap](https://www.linkedin.com/in/neha-kashyap-999930275)
+
+---
+
+Thanks for visiting!
