@@ -7,7 +7,7 @@ function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="w-full bg-[#161513] shadow-md fixed top-0 z-50 py-4 px-5 sm:px-10">
+    <nav className="w-full overflow-x-hidden bg-[#161513] shadow-md fixed top-0 z-50 py-4 px-5 sm:px-10">
       <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
 
         {/* Logo */}
