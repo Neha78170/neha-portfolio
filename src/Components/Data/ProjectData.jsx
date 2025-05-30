@@ -14,6 +14,13 @@ const ProjectData = [
     image: todo,
     link: "https://neha-weather-app.netlify.app/",
     codeLink: "https://github.com/Neha78170/weather-app.git"
+  },
+   {
+    title: "profile-map-app",
+    description: "A simple profile-map-aoo built using React and tailwind css",
+    image: profile,
+    link: "https://user-map-tracker-app.netlify.app/",
+    codeLink: "https://github.com/Neha78170/profile-mapping-react-app.git"
   }
 ]
 
